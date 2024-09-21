@@ -9,7 +9,10 @@ class RealMainComponent(
 ) : ComponentContext by componentContext, MainComponent {
 
     override val toolbarComponent: ToolbarComponent = RealToolbarComponent(
-        childContext("toolbar")
+        childContext("toolbar"),
+        onPositiveFeedbackGiven = {
+            signInComponent.unlockBonusTheoryMaterial()
+        }
     )
 
     override val signInComponent: SignInComponent = RealSignInComponent(

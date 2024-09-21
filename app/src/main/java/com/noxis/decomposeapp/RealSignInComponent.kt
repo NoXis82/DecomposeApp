@@ -1,5 +1,6 @@
 package com.noxis.decomposeapp
 
+import android.util.Log
 import com.arkivanov.decompose.ComponentContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -36,6 +37,15 @@ class RealSignInComponent(
             inProgress.value = false
 
             // TODO: navigate to the next screen
+        }
+    }
+
+    override fun unlockBonusTheoryMaterial() {
+        Log.d("RealSignInComponent", ">>> unlockBonusTheoryMaterial invoke")
+        coroutineScope.launch {
+            inProgress.value = true
+            delay(3000)
+            inProgress.value = false
         }
     }
 

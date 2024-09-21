@@ -69,6 +69,7 @@ class FakeSignInComponent : SignInComponent {
     override fun onLoginChanged(login: String) = Unit
     override fun onPasswordChanged(password: String) = Unit
     override fun onSignInClick() = Unit
+    override fun unlockBonusTheoryMaterial() = Unit
 }
 
 @Preview(showSystemUi = true)

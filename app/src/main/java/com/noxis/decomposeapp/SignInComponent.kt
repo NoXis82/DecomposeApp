@@ -16,4 +16,6 @@ interface SignInComponent {
 
     fun onSignInClick()
 
+    fun unlockBonusTheoryMaterial()
+
 }
