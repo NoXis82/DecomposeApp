@@ -14,17 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val rootComponent =
-                RealSignInComponent(defaultComponentContext(), FakeAuthorizationRepository())
-            DecomposeAppTheme {
-                Scaffold(
-                    bottomBar = {
-                        ToolbarUi()
-                    }
-                ) { _ ->
-                    SignInUi(component = rootComponent)
-                }
-
-            }
+                RealMainComponent(defaultComponentContext(), FakeAuthorizationRepository())
+            MainUi(mainComponent = rootComponent)
         }
     }
 }

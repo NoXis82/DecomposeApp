@@ -1,5 +1,5 @@
 package com.noxis.decomposeapp
 
 interface ToolbarComponent {
-    fun onHintClick()
+    fun onHintClick(value: String)
 }

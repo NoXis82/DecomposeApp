@@ -24,13 +24,19 @@ fun ToolbarUi(component: ToolbarComponent) {
             modifier = Modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            IconButton(onClick = { }) {
+            IconButton(onClick = {
+                component.onHintClick("Меню")
+            }) {
                 Icon(Icons.Filled.Menu, contentDescription = "Меню")
             }
-            IconButton(onClick = { }) {
+            IconButton(onClick = {
+                component.onHintClick("О приложении")
+            }) {
                 Icon(Icons.Filled.Info, contentDescription = "О приложении")
             }
-            IconButton(onClick = { }) {
+            IconButton(onClick = {
+                component.onHintClick("Поиск")
+            }) {
                 Icon(Icons.Filled.Search, contentDescription = "Поиск")
             }
         }
