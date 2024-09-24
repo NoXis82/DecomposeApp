@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -61,6 +63,10 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.decompose)
+    implementation(libs.kotlinx.serialization.json)
+//    runtimeOnly("com.arkivanov.decompose:extensions-compose-android:3.1.0")
+//    runtimeOnly("com.arkivanov.decompose:decompose-android:3.1.0")
+    implementation("com.arkivanov.decompose:extensions-compose-jetpack:2.2.3")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
